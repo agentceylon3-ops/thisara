@@ -1917,6 +1917,93 @@ html {
 }
 
 
+
+/*result */
+/* Result Sheet Section Base */
+.result-sheet-section {
+  padding: 50px 15px;
+  background-color: #000000; /* Pure Black Background */
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card Wrapper */
+.result-card-container {
+  width: 100%;
+  max-width: 900px;
+  background-color: #0d0d0d;
+  border: 1px solid rgba(255, 152, 0, 0.35); /* Orange Border */
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+
+/* Title & Subtitle */
+.result-title {
+  font-size: 1.8rem;
+  color: #ff9800; /* Orange */
+  margin-bottom: 6px;
+}
+
+.result-subtitle {
+  font-size: 0.95rem;
+  color: #a0aec0;
+  margin-bottom: 25px;
+}
+
+/* Image Wrapper Box */
+.result-image-box {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Image Rules */
+.responsive-result-img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* Mobile screens වල එකපාර සම්පූර්ණයෙන්ම පෙනෙන විදිහට */
+  object-fit: contain; /* Aspect ratio එක වෙනස් නොවී පැහැදිලිව පෙන්වයි */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.result-image-box:hover .responsive-result-img {
+  transform: scale(1.02); /* Mild zoom on hover */
+}
+
+/* Zoom Hint Badge */
+.img-overlay-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  border: 1px solid #ff9800;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+/* Mobile responsive font sizing */
+@media (max-width: 480px) {
+  .result-title {
+    font-size: 1.4rem;
+  }
+  .result-card-container {
+    padding: 20px 12px;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -2020,11 +2107,39 @@ html {
                         </div>
                     </div>
 
+                    <!-- Feature 4 -->
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text-box">
+                            <p>දරුවාගේ මාසික පරීක්ෂණ වලදී ලබාගන්නා ලකුණු සහ ප්‍රගති වාර්ථාවන් ඕනෑම වේලාවක පරීක්ෂා කිරීමට අපේ වෙබ් අඩවියට පිවිසෙන්න</p>
+                            <button style="background-color: #ff7300; padding: 15px; border-radius: 29px;"> <a href="https://thisararanjeewa.com" style="text-decoration: none;color: white;" target="_blank">අපේ වෙබ් අඩවිය </a></button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
         </div>
     </section>
+
+
+    <!-- Result Sheet / Exam Results Section -->
+<section class="result-sheet-section">
+  <div class="result-card-container">
+    <h2 class="result-title"> පන්ති ප්‍රතිඵල ලේඛනය (Result Sheet)</h2>
+    <p class="result-subtitle">අපගේ සිසුන්ගේ විශිෂ්ට සාමාර්ථ සහ ප්‍රතිඵල ලේඛනය</p>
+
+    <!-- Result Image Wrapper -->
+    <div class="result-image-box">
+      <!-- 'result.jpg' වෙනුවට සර්ගේ photo එකේ file name එක ලබාදෙන්න -->
+      <img src="result.jpg" alt="Maths Class Result Sheet" class="responsive-result-img" loading="lazy">
+      <div class="img-overlay-badge">Zoom කර බලන්න</div>
+    </div>
+  </div>
+</section>
+
 
 
     <!-- Top Performers & Award Winners Slider -->
@@ -2037,39 +2152,120 @@ html {
       <!-- Photo 1 -->
       <div class="achiever-slide">
         <div class="achiever-card">
-          <img src="s1.jpg" alt="Top Performer 1">
+          <img src="s8.jpg" alt="Top Performer 1">
           <div class="achiever-info">
-            <h4>1 st Place</h4>
+            <h4>අපේ ගණිත විශිෂ්ටතමයින්</h4>
           </div>
         </div>
       </div>
       <!-- Photo 2 -->
       <div class="achiever-slide">
         <div class="achiever-card">
-          <img src="s2.jpg" alt="Top Performer 2">
+          <img src="s9.jpg" alt="Top Performer 2">
           <div class="achiever-info">
-            <h4>1 st Place</h4>
+            <h4>අපේ ගණිත විශිෂ්ටතමයින්</h4>
           </div>
         </div>
       </div>
       <!-- Photo 3 -->
       <div class="achiever-slide">
         <div class="achiever-card">
-          <img src="s3.jpg" alt="Top Performer 3">
+          <img src="s10.jpg" alt="Top Performer 3">
           <div class="achiever-info">
-            <h4>2 nd Place</h4>
+            <h4>අපේ ගණිත විශිෂ්ටතමයින්</h4>
           </div>
         </div>
       </div>
       <!-- Photo 4 -->
       <div class="achiever-slide">
         <div class="achiever-card">
-          <img src="s4.jpg" alt="Top Performer 4">
+          <img src="s11.jpg" alt="Top Performer 4">
           <div class="achiever-info">
-            <h4>3 rd Place</h4>
+            <h4>අපේ ගණිත විශිෂ්ටතමයින්</h4>
           </div>
         </div>
       </div>
+
+      <!-- Photo 4 -->
+      <div class="achiever-slide">
+        <div class="achiever-card">
+          <img src="s12.jpg" alt="Top Performer 4">
+          <div class="achiever-info">
+            <h4>අපේ ගණිත විශිෂ්ටතමයින්</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="achiever-slide">
+        <div class="achiever-card">
+          <img src="s13.jpg" alt="Top Performer 4">
+          <div class="achiever-info">
+            <h4>අපේ ගණිත විශිෂ්ටතමයින්</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="achiever-slide">
+        <div class="achiever-card">
+          <img src="s14.jpg" alt="Top Performer 4">
+          <div class="achiever-info">
+            <h4>අපේ ගණිත විශිෂ්ටතමයින්</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="achiever-slide">
+        <div class="achiever-card">
+          <img src="s15.jpg" alt="Top Performer 4">
+          <div class="achiever-info">
+            <h4>අපේ ගණිත විශිෂ්ටතමයින්</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 7 -->
+      <div class="achiever-slide">
+        <div class="achiever-card">
+          <img src="s1.jpg" alt="Top Performer 7">
+          <div class="achiever-info">
+            <h4>1 st Place</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 7 -->
+      <div class="achiever-slide">
+        <div class="achiever-card">
+          <img src="s2.jpg" alt="Top Performer 7">
+          <div class="achiever-info">
+            <h4>1 st Place </h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 7 -->
+      <div class="achiever-slide">
+        <div class="achiever-card">
+          <img src="s3.jpg" alt="Top Performer 7">
+          <div class="achiever-info">
+            <h4>2 nd Place </h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 7 -->
+      <div class="achiever-slide">
+        <div class="achiever-card">
+          <img src="s4.jpg" alt="Top Performer 7">
+          <div class="achiever-info">
+            <h4>3 rd Place </h4>
+          </div>
+        </div>
+      </div>
+
       <!-- Photo 5 -->
       <div class="achiever-slide">
         <div class="achiever-card">
@@ -2098,45 +2294,7 @@ html {
         </div>
       </div>
 
-      <!-- Photo 7 -->
-      <div class="achiever-slide">
-        <div class="achiever-card">
-          <img src="s8.jpg" alt="Top Performer 7">
-          <div class="achiever-info">
-            <h4>අපේ ගණිත විශිෂ්ටතමයින් </h4>
-          </div>
-        </div>
-      </div>
-
-      <!-- Photo 7 -->
-      <div class="achiever-slide">
-        <div class="achiever-card">
-          <img src="s9.jpg" alt="Top Performer 7">
-          <div class="achiever-info">
-            <h4>අපේ ගණිත විශිෂ්ටතමයින් </h4>
-          </div>
-        </div>
-      </div>
-
-      <!-- Photo 7 -->
-      <div class="achiever-slide">
-        <div class="achiever-card">
-          <img src="s10.jpg" alt="Top Performer 7">
-          <div class="achiever-info">
-            <h4>අපේ ගණිත විශිෂ්ටතමයින් </h4>
-          </div>
-        </div>
-      </div>
-
-      <!-- Photo 7 -->
-      <div class="achiever-slide">
-        <div class="achiever-card">
-          <img src="s11.jpg" alt="Top Performer 7">
-          <div class="achiever-info">
-            <h4>අපේ ගණිත විශිෂ්ටතමයින් </h4>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </section>
